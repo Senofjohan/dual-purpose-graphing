@@ -10,11 +10,13 @@ is.research.paper=TRUE
 data=data.frame(value=rnorm(10000))
 
 if (is.research.paper) { # plot data in black and white
-  ggplot(data, aes(x=value)) + geom_histogram(binwidth = 0.2)
+  histogram = ggplot(data, aes(x=value)) + geom_histogram(binwidth = 0.2)
+  print(histogram)
 } else if (!is.research.paper) { # plot data in turquoise inspired by 'theoceancleanup.com/'
-  ggplot(data, aes(x=value)) + geom_histogram(
+  histogram = ggplot(data, aes(x=value)) + geom_histogram(
     binwidth = 0.2, 
     color="black", 
     fill="turquoise" 
   ) 
+  print(histogram)
 }
