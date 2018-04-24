@@ -9,9 +9,9 @@ is.research.paper=TRUE
 # Sample data
 data=data.frame(value=rnorm(10000))
 
-if (is.research.paper) { # set black and white
+if (is.research.paper) { # plot data in black and white
   ggplot(data, aes(x=value)) + geom_histogram(binwidth = 0.2)
-} else if (!is.research.paper) { # display color
+} else if (!is.research.paper) { # plot data in turquoise inspired by 'theoceancleanup.com/'
   ggplot(data, aes(x=value)) + geom_histogram(
     binwidth = 0.2, 
     color="black", 
